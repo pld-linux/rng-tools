@@ -1,15 +1,13 @@
 Summary:	Random number generator related utilities
+Summary(pl.UTF-8):	Narzędzia do generatora liczb losowych
 Name:		rng-tools
 Version:	3
 Release:	3
 License:	GPL v2+
 Group:		Base
-URL:		http://sourceforge.net/projects/gkernel/
 Source0:	http://downloads.sourceforge.net/gkernel/%{name}-%{version}.tar.gz
 # Source0-md5:	fa305916ec101c85c0065aeceb81a38d
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gettext
+URL:		http://sourceforge.net/projects/gkernel/
 BuildRequires:	groff
 Obsoletes:	rng-utils < 1:2.0-4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -18,6 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Hardware random number generation tools.
+
+%description -l pl.UTF-8
+Narzędzia wspierające sprzętowe generowanie liczb losowych.
 
 %prep
 %setup -q
@@ -39,5 +40,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/rngtest
 %attr(755,root,root) %{_sbindir}/rngd
-%{_mandir}/man1/rngtest.1.*
-%{_mandir}/man8/rngd.8.*
+%{_mandir}/man1/rngtest.1*
+%{_mandir}/man8/rngd.8*
