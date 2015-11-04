@@ -1,14 +1,15 @@
 Summary:	Random number generator related utilities
 Summary(pl.UTF-8):	Narzędzia do generatora liczb losowych
 Name:		rng-tools
-Version:	4
+Version:	5
 Release:	1
 License:	GPL v2+
 Group:		Base
 Source0:	http://downloads.sourceforge.net/gkernel/%{name}-%{version}.tar.gz
-# Source0-md5:	ae89dbfcf08bdfbea19066cfbf599127
+# Source0-md5:	6726cdc6fae1f5122463f24ae980dd68
 URL:		http://sourceforge.net/projects/gkernel/
 BuildRequires:	groff
+BuildRequires:	libgcrypt-devel
 Obsoletes:	rng-utils < 1:2.0-4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
