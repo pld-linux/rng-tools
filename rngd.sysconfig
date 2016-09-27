@@ -1,0 +1,4 @@
+# Options can be customized here
+# check: man rngd
+
+#RNGD_OPTIONS="--rng-device=/dev/hwrandom --random-step=64 --fill-watermark=2048 --no-drng=0 --no-tpm=0"

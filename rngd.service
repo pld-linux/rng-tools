@@ -1,0 +1,14 @@
+[Unit]
+Description=Check and feed random data from hardware device to kernel random device
+
+[Service]
+Environment=RNGD_OPTIONS=
+EnvironmentFile=-/etc/sysconfig/rngd
+Type=forking
+ExecStart=/sbin/rngd $RNGD_OPTIONS
+
+# rngd reacts slowly to SIGTERM, without a good reason
+TimeoutStopSec=3
+
+[Install]
+WantedBy=multi-user.target
