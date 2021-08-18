@@ -1,12 +1,12 @@
 Summary:	Random number generator related utilities
 Summary(pl.UTF-8):	Narzędzia do generatora liczb losowych
 Name:		rng-tools
-Version:	6.13
+Version:	6.14
 Release:	1
 License:	GPL v2+
 Group:		Base
 Source0:	https://github.com/nhorman/rng-tools/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	5a2ccbfc5dea5952254eef7e19cef3f5
+# Source0-md5:	917d21dd2b06816b0484e220dfb5ba4b
 Source1:	rngd.service
 Source2:	rngd.sysconfig
 URL:		https://github.com/nhorman/rng-tools/
@@ -75,6 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README.md
 %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/rngd
+%attr(755,root,root) %{_bindir}/randstat
 %attr(755,root,root) %{_bindir}/rngtest
 %attr(755,root,root) %{_sbindir}/rngd
 %{_mandir}/man1/rngtest.1*
