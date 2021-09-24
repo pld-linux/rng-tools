@@ -2,7 +2,7 @@ Summary:	Random number generator related utilities
 Summary(pl.UTF-8):	Narzędzia do generatora liczb losowych
 Name:		rng-tools
 Version:	6.14
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Base
 Source0:	https://github.com/nhorman/rng-tools/archive/v%{version}/%{name}-%{version}.tar.gz
