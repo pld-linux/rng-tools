@@ -1,12 +1,12 @@
 Summary:	Random number generator related utilities
 Summary(pl.UTF-8):	Narzędzia do generatora liczb losowych
 Name:		rng-tools
-Version:	6.14
-Release:	2
+Version:	6.15
+Release:	1
 License:	GPL v2+
 Group:		Base
 Source0:	https://github.com/nhorman/rng-tools/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	917d21dd2b06816b0484e220dfb5ba4b
+# Source0-md5:	75a5c1526fa98beccffbe0e691adfe75
 Source1:	rngd.service
 Source2:	rngd.sysconfig
 URL:		https://github.com/nhorman/rng-tools/
