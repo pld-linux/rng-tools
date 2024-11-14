@@ -1,12 +1,12 @@
 Summary:	Random number generator related utilities
 Summary(pl.UTF-8):	Narzędzia do generatora liczb losowych
 Name:		rng-tools
-Version:	6.15
+Version:	6.17
 Release:	1
 License:	GPL v2+
 Group:		Base
 Source0:	https://github.com/nhorman/rng-tools/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	75a5c1526fa98beccffbe0e691adfe75
+# Source0-md5:	07d548e8b75ffb4eedc0058b3802af0b
 Source1:	rngd.service
 Source2:	rngd.sysconfig
 URL:		https://github.com/nhorman/rng-tools/
@@ -14,13 +14,15 @@ BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	curl-devel
 BuildRequires:	jansson-devel
-BuildRequires:	jitterentropy-devel
+BuildRequires:	jitterentropy-devel >= 3.1.0
+BuildRequires:	libcap-devel
 BuildRequires:	libp11-devel
 BuildRequires:	librtlsdr-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	openssl-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.671
+Requires:	jitterentropy >= 3.1.0
 Requires:	systemd-units >= 38
 Suggests:	opensc
 Obsoletes:	rng-utils < 1:2.0-4.1
